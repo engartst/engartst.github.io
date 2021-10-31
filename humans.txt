@@ -1,0 +1,9 @@
+/* TEAM */
+Your title: Stewart Engart
+Site: engartst@gmail.com
+Location: Camarillo, CA, USA
+     
+/* SITE */
+Last update: 2021/10/30 
+Standards: HTML5, CSS3
+Software: VIM, Apache, P5js

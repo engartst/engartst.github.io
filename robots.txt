@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: /
+Allow: /$
+Allow: /events
+Allow: /works
+Allow: /cv
+Allow: /sitemap.xml
+Allow: /site.webmanifest

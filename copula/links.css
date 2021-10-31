@@ -1,0 +1,52 @@
+html{
+    align-content: center;
+    text-align: center;
+}
+.head{
+    align-content: center;
+    border-radius: 50%;
+    width: 96px;
+    height: 96px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    object-fit: cover; 
+    object-position: 50% 0;
+}
+
+.handle{
+    margin: 0px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.fit{
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: larger;
+    padding: 2rem !important;
+}
+body{
+    background-image: url("background.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+
+@media screen and (min-width: 600px) {
+    .fit{width: 66% !important;min-width: 525px}
+}
