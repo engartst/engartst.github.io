@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'bookman';
+    src: url('BookmanBold.woff') format('woff'), url('BookmanBold.ttf') format('truetype');
+}
+
+body {
+    align-content: center;
+    text-align: center;
+    font-family: 'bookman', serif;
+    margin: 5 rem;
+    background: #2D7198;
+    color: #f1f2f6;
+}
+p{
+   display: inline-block;
+   max-width: 80%;
+}
+ol{
+   display: inline-block;
+   max-width: 80%;
+}
+a {
+   color: #cd8987;
+}
+a:visited {
+   color: #f5b82e;
+}
+img {
+    height: auto;
+    max-width: 80%;
+    margin: 5 rem;
+}
+html {
+   scroll-behavior: smooth;
+}
+.align {
+   display: flex;
+   align-items: center;
+} 
+
+h1 {font-size: 2.618rem;}
+
+h2 {font-size: 1.618rem;}
+h3 {font-size: 1.218rem; max-width: 80%; display: inline-block}
