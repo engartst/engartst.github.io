@@ -9,7 +9,7 @@ dir_list = []
 template_env = Environment(loader=FileSystemLoader(searchpath='.'))
 template = template_env.get_template('piece_template.html')
 
-for root, dirs, files in os.walk('./pieces/'):
+for root, dirs, files in os.walk('./works/'):
     for di in dirs:
         dir_list.append(os.path.join(root,di))
     for file in files:
