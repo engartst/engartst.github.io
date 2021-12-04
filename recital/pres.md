@@ -239,3 +239,27 @@ Stoll, 2009.
 ---
 
 ## Interface Design
+
+---
+
+## Bibliography
+
+Almeida, Gilberto Bernardes de. “COMPOSING MUSIC BY SELECTION CONTENT-BASED ALGORITHMIC-ASSISTED AUDIO COMPOSITION,” n.d., 231.
+
+Andersen, Kristina, and Peter Knees. “CONVERSATIONS WITH EXPERT USERS IN MUSIC RETRIEVAL AND RESEARCH CHALLENGES FOR CREATIVE MIR.” New York City, 2016, 7.
+
+Bayle, François. “Image-of-Sound, or i-Sound: Metaphor/Metaform.” Contemporary Music Review 4, no. 1 (January 1989): 165–70. https://doi.org/10.1080/07494468900640261.
+
+Blum, Thomas L., Douglas F. Keislar, James A. Wheaton, and Erling H. Wold. Method and article of manufacture for content-based analysis, storage, retrieval, and segmentation of audio information. United States US5918223A, filed July 21, 1997, and issued June 29, 1999. https://patents.google.com/patent/US5918223A/en.
+
+---
+
+Hackbarth, Benjamin, Norbert Schnell, Philippe Esling, and Diemo Schwarz. “Composing Morphology: Concatenative Synthesis as an Intuitive Medium for Prescribing Sound in Time.” Contemporary Music Review 32, no. 1 (February 2013): 49–59. https://doi.org/10.1080/07494467.2013.774513.
+
+“Plunderphonics - Interviews.” Accessed September 1, 2021. http://www.plunderphonics.com/xhtml/xinterviews.html.
+
+Stoll, Thomas M. “BEYOND CONCATENATION: SOME IDEAS FOR THE CREATIVE USE OF CORPUS-BASED SONIC MATERIAL,” 2009, 4. http://hdl.handle.net/2027/spo.bbp2372.2009.044.
+
+Sturm, Bob L. “Adaptive Concatenative Sound Synthesis and Its Application to Micromontage Composition.” Computer Music Journal 30, no. 4 (December 2006): 46–66. https://doi.org/10.1162/comj.2006.30.4.46.
+
+Tversky, Amos. “Features of Similarity.” Psychological Review 84, no. 4 (1977): 327–52. https://doi.org/10.1037/0033-295X.84.4.327.
