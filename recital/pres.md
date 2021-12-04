@@ -29,7 +29,8 @@ UC Santa Barbara, December 04, 2021
 
 ### Music Information Retrieval
 
-segmentation
+segmentation (fixed, onset, whole file)
+![](partyHorns.mp3)
 analysis
 retrieval
 
@@ -39,7 +40,7 @@ retrieval
 
 copyright enforcement (royalties, plagarism)
 playlist recommendations (mood, emotion, style)
-querying by humming, etc.
+song identification, querying by humming, bird call identification etc.
 
 ---
 
@@ -59,7 +60,7 @@ Hackbarth, p 50.
 3. unit selection
 4. synthesis
 
-Almeida, p 11.
+de Almeida, p 11.
 
 ---
 
@@ -146,14 +147,14 @@ Supervised vs. unsupervised
 
 weighting of features
 multiple passes
-Principal component analysis (PCA)
+principal component analysis (PCA)
 
 ---
 ## Sound design
 
 Querying for a desired sound based off of features rather than manipulation of an audio file to fit.
 
-Implication to source identification.
+Effect on source identification.
 
 ---
 
@@ -173,7 +174,7 @@ Plunderphonics - Interviews
 
 ---
 
-# Trajectories
+# Trajectory and Spectromorphology
 
 Dennis Smalley
 Manuella Blackburn
@@ -181,11 +182,12 @@ Manuella Blackburn
 ![bg right 99%](unidirectionalTrajectory.png)
 
 ---
+
 # Control Signals
 
 modular synthesis
 Come On, America!
-![bg right 95%](linearSampling.png)
+![bg right 95%](exponentialSampling.png)
 
 ---
 
@@ -194,6 +196,7 @@ Come On, America!
 Stoll, 2009.
 
 ---
+
 ## Personal Audio Corpus
 
 ---
@@ -254,9 +257,9 @@ Stoll, 2009.
 
 ## Bibliography
 
-Almeida, Gilberto Bernardes de. “COMPOSING MUSIC BY SELECTION CONTENT-BASED ALGORITHMIC-ASSISTED AUDIO COMPOSITION,” n.d., 231.
+Almeida, Gilberto Bernardes de. “COMPOSING MUSIC BY SELECTION CONTENT-BASED ALGORITHMIC-ASSISTED AUDIO COMPOSITION,” Universidade do Porto (Portugal), 231.
 
-Andersen, Kristina, and Peter Knees. “CONVERSATIONS WITH EXPERT USERS IN MUSIC RETRIEVAL AND RESEARCH CHALLENGES FOR CREATIVE MIR.” New York City, 2016, 7.
+Andersen, Kristina, and Peter Knees. “CONVERSATIONS WITH EXPERT USERS IN MUSIC RETRIEVAL AND RESEARCH CHALLENGES FOR CREATIVE MIR.” 17th International Society for Music Information Retrieval Conference, 2016, 7.
 
 Bayle, François. “Image-of-Sound, or i-Sound: Metaphor/Metaform.” Contemporary Music Review 4, no. 1 (January 1989): 165–70. https://doi.org/10.1080/07494468900640261.
 
