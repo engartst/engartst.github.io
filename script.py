@@ -1,6 +1,6 @@
 from markdown2 import markdown
 from jinja2 import Environment, FileSystemLoader
-from json import load 
+from json import load
 import fnmatch, glob, os, os.path
 
 file_list = []
