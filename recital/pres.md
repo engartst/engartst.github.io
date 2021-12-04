@@ -31,6 +31,7 @@ UC Santa Barbara, December 04, 2021
 
 segmentation
 analysis
+retrieval
 
 ---
 
@@ -78,7 +79,7 @@ Sturm, p 48.
 4. Instead of “more of the same” recommendations, desired features are surprise, opposition, individuality, and control over the recommendation process.
 
 ---
-## Searching a database from Blum, 1999.
+## Searching a database from Blum et al., 1999.
 
 1. Simile
 2. Acoustical/perceptual features
@@ -128,7 +129,7 @@ Tversky, p 342.
 ---
 
 Supervised vs. unsupervised
-*KONTAKTE* by Stockhausen
+*Kontakte* by Stockhausen
 
 ---
 
@@ -216,6 +217,8 @@ Stoll, 2009.
 
 ---
 ## *A More Sound Outlook &reg;*
+
+![](outlookSound.mp3)
 
 ---
 ![bg 55%](fft_outlookSound.png)
