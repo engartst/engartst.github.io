@@ -131,6 +131,7 @@ Supervised vs. unsupervised
 *KONTAKTE* by Stockhausen
 
 ---
+
 ![bg 75%](kmeans12_cluster3.png)
 
 ---
@@ -173,10 +174,16 @@ Plunderphonics - Interviews
 
 # Trajectories
 
+Dennis Smalley
+Manuella Blackburn
+
 ![bg right 99%](unidirectionalTrajectory.png)
 
 ---
 # Control Signals
+
+modular synthesis
+Come On, America!
 ![bg right 95%](linearSampling.png)
 
 ---
