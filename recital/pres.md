@@ -134,6 +134,10 @@ Supervised vs. unsupervised
 
 ---
 
+![bg 75%](kmeans12.png)
+
+---
+
 ![bg 75%](kmeans12_cluster3.png)
 
 ---
