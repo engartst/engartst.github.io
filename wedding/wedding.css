@@ -13,7 +13,8 @@ body {
 }
 p{
    display: inline-block;
-   max-width: 80%;
+   max-width: 70%;
+   font-size: 16pt;
 }
 ol{
    display: inline-block;
@@ -41,4 +42,4 @@ html {
 h1 {font-size: 2.618rem;}
 
 h2 {font-size: 1.618rem;}
-h3 {font-size: 1.218rem; max-width: 80%; display: inline-block}
+h3 {font-size: 1.218rem; max-width: 80%;}
