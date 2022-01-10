@@ -1,7 +1,7 @@
 from markdown2 import markdown
 from jinja2 import Environment, FileSystemLoader
 from json import load
-import fnmatch, glob, os, os.path
+import fnmatch, glob, os, os.path, re
 
 file_list = []
 dir_list = []
@@ -14,7 +14,6 @@ for root, dirs, files in os.walk('./works/'):
         dir_list.append(os.path.join(root,di))
     for file in files:
         file_list.append(os.path.join(root,file))
-
 
 
 for file in file_list:
@@ -52,3 +51,55 @@ for file in file_list:
                         audio=mp3
                     )
                 )
+
+recipe_dir_list = []
+recipe_file_list = []
+recipe_list = []
+
+#template_env = Environment(loader=FileSystemLoader(searchpath='.'))
+recipe_template = template_env.get_template('recipe_template.html')
+
+for root, dirs, files in os.walk('./recipes/'):
+    for di in dirs:
+        recipe_dir_list.append(os.path.join(root,di))
+    for file in files:
+        recipe_file_list.append(os.path.join(root,file))
+
+
+for file in recipe_file_list:
+    if file.endswith(".md"):
+        with open(f'{file}', 'r') as markdown_file:
+            article = markdown(markdown_file.read())
+            title = file.split('/')
+            title = title[-1]
+            title = title.split('.')[0]
+            recipe_list.append(title)
+            with open(f'{file[:-3]}.html', 'w') as output_file:
+                output_file.write(
+                    recipe_template.render(
+                        article=article,
+                        title=title
+                    )
+                )
+
+
+recipe_list_template = template_env.get_template('recipe_list_template.html')
+
+recipe_len = len(recipe_list)
+recipe_list.sort()
+list_list = []
+
+for i in recipe_list:
+    i = re.sub('([A-Z])', r' \1', i)
+    list_list.append(i.title())
+
+zip_list = zip(list_list, recipe_list)
+
+with open('./recipes/index.html', 'w') as output_file:
+    output_file.write(
+        recipe_list_template.render(
+            recipe_list = recipe_list,
+            recipe_len = recipe_len,
+            list_list = zip_list
+        )
+    )
