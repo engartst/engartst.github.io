@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <title>Recipes</title>
     <link rel="author" href="humans.txt" />
-    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
 </head>
 
 <body>
@@ -17,11 +17,11 @@
         </div>
     </div>
 
-    <img src="../photos/brenda.png" alt="Miss Brenda" width="100%" height="auto">
+    <img src="photos/brenda.png" alt="Miss Brenda" width="100%" height="auto">
 
     {% for item, link in list_list %}
     <h2>
-    <a href="{{link}}.html" class="title fancy-link">{{item}}</a>
+    <a href="recipes/{{link}}" class="title fancy-link">{{item}}</a>
     </h2>
     {% endfor%}
 </body>

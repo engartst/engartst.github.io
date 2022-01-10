@@ -95,7 +95,7 @@ for i in recipe_list:
 
 zip_list = zip(list_list, recipe_list)
 
-with open('./recipes/index.html', 'w') as output_file:
+with open('recipes.html', 'w') as output_file:
     output_file.write(
         recipe_list_template.render(
             recipe_list = recipe_list,
