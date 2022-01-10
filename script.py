@@ -49,6 +49,6 @@ for file in file_list:
                         score_exists=score_exists,
                         score=pdf,
                         audio_exists=audio_exists,
-                        audio=audio
+                        audio=mp3
                     )
                 )

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/********** Essential Audio Player CSS **********/
+/********** Essential Audio Player 1.0.3 CSS **********/
 
 
 
@@ -66,6 +66,9 @@ div.essential_audio > div:nth-child(1) div.play:after {
 /* 2.d) The Player Button – Dragging */
 div.essential_audio > div:nth-child(1) div.drag {
 	transition: left 0s!important;
+	/*
+	cursor: grab!important;
+	*/
 }
 
 /* 2.e) The Player Button – Error */
