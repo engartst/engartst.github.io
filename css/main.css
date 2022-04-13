@@ -214,10 +214,10 @@ body::-webkit-scrollbar {
   width: 0.5rem;
 }
 ::-webkit-scrollbar-track {
-  background: #ff6700;
+  background: var(--link);
 }
 ::-webkit-scrollbar-thumb {
-  background: #fefefe;
+  background: var(--bgcolor);
 }
 tr a {
   text-decoration: none;
