@@ -29,6 +29,7 @@ body {
   background: var(--bgcolor);
   text-align: justify;
   text-justify: inter-word;
+  padding-bottom: 50px;
 }
 a {
   color: var(--link);

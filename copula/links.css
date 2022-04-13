@@ -41,6 +41,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    padding-bottom: 50px;
 }
 a{
     text-decoration: none;
