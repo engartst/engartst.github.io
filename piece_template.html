@@ -31,6 +31,11 @@
     </div>
 
 
+    {% if pic_exists is sameas true%}
+    <img src="{{ pic }}"/>
+    <br />
+    {% else %}
+    {% endif %}
     {{ article}}
     {% if audio_exists is sameas true%}
     <div class="essential_audio" data-url="{{ audio }}"></div>

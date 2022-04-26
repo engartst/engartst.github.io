@@ -3,3 +3,7 @@ This piece was composed during the 2020-2021 COVID global pandemic. Unlike other
 Premiere Performance:
 
 - Transient Canvas, April 8, 2022 - UCSB Corwin Series, Karl Geiringer Hall, Santa Barbara, CA
+
+Recognition:
+
+- <a class="fancy-link" href="https://music.ucsb.edu/news/latest-news/announcing-2021-dorothy-and-sherrill-c-corwin-awards-winners">Dorothy and Sherrill C. Corwin Awards 2021 - Special Category (Transient Canvas)</a>

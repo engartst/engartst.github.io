@@ -34,6 +34,11 @@ for file in file_list:
             audio = file[:-3]+"ENGART.mp3"
             audio_exists = os.path.exists(audio)
 
+            # check for png
+            png =_folder[2][:-3]+"ENGART.png"
+            pic = file[:-3]+"ENGART.png"
+            pic_exists = os.path.exists(pic)
+
             with open(f'{_folder[0]}/config.json', 'r') as config_file:
                 config = load(config_file)
 
@@ -48,7 +53,9 @@ for file in file_list:
                         score_exists=score_exists,
                         score=pdf,
                         audio_exists=audio_exists,
-                        audio=mp3
+                        audio=mp3,
+                        pic_exists=pic_exists,
+                        pic=png
                     )
                 )
 

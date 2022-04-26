@@ -1,4 +1,8 @@
-Commissioned by UNC Chapel Hill Performing Arts' "Compose Carolina" with the prompt "In the Now"
+# Usynlig
+
+Usynlig is an acousmatic piece that was made by first analyzing 64,533 audio files through MIR corpus analysis and then constructed from the bottom up by means of querying, clustering, classifying, measuring similarity/dissimilarity, navigating latent space, and musical intuition. 
+
+The piece was commissioned by Carolina Performing Arts for Compose Carolina 2021 with the prompt of "In The Now". The piece addresses this prompt through constructing gesture of concrète iconic and referential sounds. These sounds have consistent inner logic through the MIR analysis and the piece asks the listener to listen past recognizable sounds and listen to the larger phrase and structural construction.
 
 Premiere performance: 
 
@@ -12,4 +16,4 @@ Other performances:
 
 Recognition:
 
-- Sound of the Year Awards 2021: Composed with Sound - Highly Commended. [Link to SotY 2021](https://www.soundoftheyearawards.com/2021)
+- Sound of the Year Awards 2021: Composed with Sound - <em>Highly Commended</em>. [Link to SotYA 2021](https://www.soundoftheyearawards.com/2021)
