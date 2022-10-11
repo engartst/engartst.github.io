@@ -58,11 +58,33 @@ function handleDrop(e) {
 
     handleFiles(files);
 }
+
+
+// this function needs to be reworked to not show preview of image but of text (see below)
+function fileValidation() {
+    var fileInput = document.getElementById('file');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.txt)$/i;
+    if (!allowedExtensions.exec(filePath)) {
+        alert('Please upload file having extensions .txt only.');
+        fileInput.value = '';
+        return false;
+    } else {
+        //Image preview
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('preview').innerHTML = e.target.result;
+            };
+            reader.readAsText(fileInput.files[0]);
+        }
+    }
+}
+
 function handleFiles(files) {
     files = [...files];
     initializeProgress(files.length);
     files.forEach(uploadFile);
-    files.forEach(previewFile);
 }
 
 function uploadFile(file, i) {
@@ -86,62 +108,39 @@ function uploadFile(file, i) {
     formData.append("file", file);
     xhr.send(formData);
 }
-// this function needs to be reworked to not show preview of image but of text (see below)
-function previewFile(file) {
-    let reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onloadend = function () {
-        let img = document.createElement("img");
-        img.src = reader.result;
-        document.getElementById("gallery").appendChild(img);
-    };
-}
-
-// testing
-function fileValidation() {
-    var fileInput = document.getElementById("file");
-    var filePath = fileInput.value;
-    var allowedExtensions = /(\.txt)$/i;
-    if (!allowedExtensions.exec(filePath)) {
-        alert("Please upload file having extensions .txt only.");
-        fileInput.value = "";
-        return false;
-    } else {
-        //Image preview
-        if (fileInput.files && fileInput.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                document.getElementById("preview").innerHTML = "";
-                document.getElementById("preview").append(e.target.result);
-            };
-            reader.readAsText(fileInput.files[0]);
-        }
-    }
-}
-
-function previewFile() {
-    const content = document.querySelector(".content");
-    const [file] = document.querySelector("input[type=file]").files;
-    const reader = new FileReader();
-
-    reader.addEventListener(
-        "load",
-        () => {
-            // this will then display a text file
-            content.innerText = reader.result;
-        },
-        false
-    );
-
-    if (file) {
-        reader.readAsText(file);
-    }
-}
-
 //testing above
 
 function submit() {
     selectElement = document.querySelector("#location");
     output = selectElement.options[selectElement.selectedIndex].value;
     document.querySelector(".output").textContent = output;
+}
+
+// testing for the preview box
+
+document.getElementById('input-file')
+    .addEventListener('change', getFile)
+
+function getFile(event) {
+    const input = event.target
+    if ('files' in input && input.files.length > 0) {
+        placeFileContent(
+            document.getElementById('content-target'),
+            input.files[0])
+    }
+}
+
+function placeFileContent(target, file) {
+    readFileContent(file).then(content => {
+        target.value = content
+    }).catch(error => console.log(error))
+}
+
+function readFileContent(file) {
+    const reader = new FileReader()
+    return new Promise((resolve, reject) => {
+        reader.onload = event => resolve(event.target.result)
+        reader.onerror = error => reject(error)
+        reader.readAsText(file)
+    })
 }

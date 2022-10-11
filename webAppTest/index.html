@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=yes"
-    />
-    <link rel="stylesheet" href="01-css/style.css" />
-    <title>Upload Barcodes</title>
-  </head>
-  <body>
-    <h1>Upload your barcode files below</h1>
-    <div id="drop-area">
-      <form class="my-form">
-        <p>
-          Upload multiple files with the file dialog or by dragging and dropping
-          barcodes onto the dashed region
-        </p>
-        <input
-          type="file"
-          id="fileElem"
-          multiple
-          accept="text/*"
-          onchange="handleFiles(this.files)"
-        />
-        <label class="button" for="fileElem">Select some files</label>
-      </form>
-      <div id="gallery"></div>
-      <!----------this is where I want to show to preview of the files uploaded----->
-    </div>
-    <p>This is where a preview of the file content will be...</p>
 
-    <!--<input type="file" onchange="previewFile()" /><br />-->
-    <p class="content"></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="01-css/style.css" />
+  <title>Upload Barcodes</title>
+</head>
 
-    <div class="preview" id="preview">
-      <!--this is another attempt to show the contents of the uploaded file-->
-    </div>
+<body>
+  <h1>Upload your barcode files below</h1>
+  <div id="drop-area">
+    <form class="my-form">
+      <p>
+        Upload multiple files with the file dialog or by dragging and dropping
+        here
+      </p>
+      <input type="file" name="file_name" id="file" class="inputfile" multiple accept="text/*" onchange="fileValidation(); handleFiles(this.files)" />
+      <label class="button" for="file">Select files</label>
+    </form>
 
-    <h2>Which library are you checking in the books?</h2>
+    <pre><div class="preview" id="preview"></pre>
+  </div>
+ <!-- <div > -->
+ <!--   <form method="post" action="" enctype="multipart/form-data"> -->
+ <!--     <input type="file" name="file_name" id="file" class="inputfile" onchange="return fileValidation()" /> -->
+ <!--   </form> -->
 
-    <select id="location">
-      <option disabled selected value>-- select an option --</option>
-      <option value="Bostock Library">Bostock</option>
-      <option value="Perkins Library">Perkins</option>
-      <option value="Rubenstein Library">Rubenstein</option>
-    </select>
-    <br />
+ <!-- </div> -->
+  <!-- <div id="gallery"></div> -->
+  <!-- this is where I want to show to preview of the files uploaded -->
+  <!-- </div>  -->
+  <p class="content"></p>
+  <!-- <div class="preview" id="preview"> -->
+  <!-- this is another attempt to show the contents of the uploaded file -->
+  <!-- </div>   -->
 
-    <h3>Checking into: <span class="output"></span></h3>
 
-    <button class="button" onClick="submit(); this.disabled = true;">
-      Submit barcodes
-    </button>
-    <!-------- <progress id="progress-bar" max="100" value="0"></progress> --->
-<script src="03-js/script.js"></script>
-  </body>
+  <div style="margin: 0 auto; text-align: center;">
+    <input type="file" id="input-file"><br>
+  </div>
+  <textarea id="content-target"></textarea>
+  <h2>Which library are you checking in the books?</h2>
+
+  <select id="location">
+    <option disabled selected value>-- select an option --</option>
+    <option value="Bostock Library">Bostock</option>
+    <option value="Perkins Library">Perkins</option>
+    <option value="Rubenstein Library">Rubenstein</option>
+  </select>
+  <br />
+
+  <h3>Checking into: <span class="output"></span></h3>
+
+  <button class="button" onClick="submit(); this.disabled = true;">
+    Submit barcodes
+  </button>
+  <!-------- <progress id="progress-bar" max="100" value="0"></progress> --->
+  <script src="03-js/script.js"></script>
+</body>
+
 </html>
