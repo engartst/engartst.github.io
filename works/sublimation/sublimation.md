@@ -1,3 +1,5 @@
+# Sublimation
+
 Sublimation is an endothermic process that occurs at temperatures and pressures below a substance’s triple point in its phase diagram, which corresponds to the lowest pressure at which the substance can exist as a liquid.
 
 Premiered at Society for Electroacoustic Music in the United States National Conference (SEAMUS) 2021, April 25, 2021. Online.
