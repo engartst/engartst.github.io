@@ -7,3 +7,7 @@
 3. There should be simple initial patterns that grow and change for a considerable period of time before coming to end in three possible ways: fading away completely (from overcrowding or becoming too sparse), settling into a stable configuration that remains unchanged thereafter, or entering an oscillating phase in which they repeat an endless cycle of two or more periods.
 
 Martin Gardner, Scientific American 223 (October 1970): 120-123.
+
+Premiere performance:
+
+- Karl Gehringer Hall, UCAB Summer Music Festival 2019, August 10, 2019.

@@ -4,3 +4,7 @@ This piece was installed on the date of the final Presidental Debates of Hilary 
 
 In the middle of the room was a podium with Kim Kardashian's book "Selfish." When a hand is placed on the book the video and audio change to an inauguration scene and "Fanfare for the Common Man" by Aaron Copland.
 
+Installed:
+
+- University of Georgia Galleries, October 19, 2016.
+
