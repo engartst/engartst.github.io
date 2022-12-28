@@ -1,0 +1,25 @@
+{
+  "Onset": [
+    "departure",
+    "emergence",
+    "anacrusis",
+    "attack",
+    "upbeat",
+    "downbeat"
+  ],
+  "Continuation": [
+    "passage",
+    "transition",
+    "prolongation",
+    "maintanence",
+    "statement"
+  ],
+  "Termination": [
+    "arrival",
+    "disappearance",
+    "closure",
+    "release",
+    "resolution",
+    "plane"
+  ]
+}
