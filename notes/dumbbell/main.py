@@ -6,7 +6,8 @@ from csv import DictReader
 import random
 from datetime import datetime
 
-random.seed(1)
+DOY = datetime.now().timetuple().tm_yday
+random.seed(DOY)
 DAY = datetime.now().weekday()
 
 def ab():
@@ -46,7 +47,7 @@ with open("dumbbellExercises.csv", 'r') as f:
     list_of_dict = list(dict_reader)
     match DAY:
         case 0:
-            print("# Monday Workout")
+            print(f'# Monday ({DOY}) Workout')
             print("## Chest and Triceps")
             legs()
             triceps()
@@ -60,7 +61,7 @@ with open("dumbbellExercises.csv", 'r') as f:
             triceps()
             chest()
         case 1:
-            print("# Tuesday Workout")
+            print(f"# Tuesday ({DOY}) Workout")
             print("## Back and Biceps")
             legs()
             back()
@@ -72,7 +73,7 @@ with open("dumbbellExercises.csv", 'r') as f:
             back()
             biceps()
         case 2:
-            print("# Wednesday Workout")
+            print(f"# Wednesday ({DOY}) Workout")
             print("## Legs and Abs")
             shoulders()
             legs()
@@ -86,7 +87,7 @@ with open("dumbbellExercises.csv", 'r') as f:
             legs()
             ab()
         case 3:
-            print("# Thursday Workout")
+            print(f"# Thursday ({DOY}) Workout")
             print("## Back and Shoulders")
             chest()
             back()
@@ -99,7 +100,7 @@ with open("dumbbellExercises.csv", 'r') as f:
             shoulders()
             triceps()
         case 4:
-            print("# Friday Workout")
+            print(f"# Friday ({DO}) YWorkout")
             print("## Full Body")
             ab()
             back()
@@ -110,4 +111,4 @@ with open("dumbbellExercises.csv", 'r') as f:
             shoulders()
             triceps()
         case _:
-            print("REST DAY")
+            print(f"REST DAY ({DOY})")
