@@ -1,27 +1,25 @@
-import random
+#!/usr/bin/env python3
+"""
+Module Docstring
+"""
 
-mylist = range(3)
-i = [0, 1, 2, 3, 4]
-j = [5, 6, 7, 8, 9]
-k = [10, 11, 12, 13, 14]
-a = 0
-b = 0
-c = 0
+__author__ = "Your Name"
+__version__ = "0.1.0"
+__license__ = "MIT"
 
-while a < len(k):
-    magic = random.choice(mylist)
-    print(f'Magic = {magic}')
-    if magic == 0 and a < 3:
-        a+=1
-    elif magic == 1 and b < 3:
-        b+=1
-    elif magic == 2 and c < 3:
-        c+=1
-    if a==3 and b==3 and c==3:
-        exit()
-    else:
-        pass
-    print(i[a])
-    print(j[b])
-    print(k[c])
+import logzero
+from logzero import logger
+from datetime import date
+from datetime import datetime
 
+
+def main():
+    """ Main entry point of the app """
+    day = datetime.now().strftime("%Y%m%d_%H%M%S")
+    logzero.logfile(f"./log/{day}.log")
+    logger.info("hello world")
+
+
+if __name__ == "__main__":
+    """ This is executed when run from the command line """
+    main()

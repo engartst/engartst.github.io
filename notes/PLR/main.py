@@ -1,9 +1,5 @@
-# Program to make a smooth transition of structuring processes from 
-# Smalley 1997
-# Stewart Engart, 20221229
-# with random motion and growth processes
-# with random behaviors
-# with random spectral space
+# Program to do parsimonious voice leading
+# Stewart Engart, 20230113
 
 import json
 import random
@@ -11,70 +7,54 @@ from datetime import date
 
 random.seed(1)
 
-# get the categories from the json file
-with open('structProcess.json') as fp:
-    data = json.load(fp)
-with open('motionGrowth.json') as fp:
-    motionList = json.load(fp)
-with open('behavior.json') as fp:
-    behaviorList = json.load(fp)
-with open('specSpace.json') as fp:
-    spaceList = json.load(fp)
+# Constants
+_key = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+_accidental = ['#', 'b', 'n']
+_quality = ['M', 'm']
+_midi_key = ['57', '59', '60', '62', '64', '65', '67']
+_midi_quality = ['0 4 7','0 3 7']
+_midi_accidental = [1, -1, 0]
 
-# print all the stuff in the list
-def print_interface(a):
-    print(a+": ")
-    print(data[a])
-    print()
-    print("---")
-    print()
-
-
-print("# SPECTROMORPHOLOGY")
+# Interface
+print("# Parsimonious Voice Leading")
 print(f'## {date.today()}')
-print()
-all = ["Onset", "Continuation", "Termination"]
-for i in all:
-    print_interface(i)
+print(_key)
+start_key = int(input("What note to start: "))
+print(_accidental)
+start_accidental = int(input("Flat or sharp: "))
+print(_quality)
+start_quality = int(input("What quality to start: "))
+print(_key)
+end_key = int(input("What note to end: "))
+print(_accidental)
+end_accidental = int(input("Flat or sharp: "))
+print(_quality)
+end_quality = int(input("What quality to end: "))
+common = int(input("How many processes to keep in common between generations (1 or 2)?: "))
 
-# get user input for where to start/end
-startOnsetIndex = int(input("Start onset index: "))
-startOnset = data["Onset"][startOnsetIndex]
-startContinuationIndex = int(input("Start continuation index: "))
-startContinuation = data["Continuation"][startContinuationIndex]
-startTerminationIndex = int(input("Start termination index: "))
-startTermination = data["Termination"][startTerminationIndex]
-print()
-print("---")
-print()
-endOnsetIndex = int(input("End onset index: "))
-endOnset = data["Onset"][endOnsetIndex]
-endContinuationIndex = int(input("End continuation index: "))
-endContinuation = data["Continuation"][endContinuationIndex]
-endTerminationIndex = int(input("End termination index: "))
-endTermination = data["Termination"][endTerminationIndex]
-print()
-print("---")
-print()
-COMMON = int(input("How many processes to keep in common between generations (1 or 2)?: "))
-print()
-print("---")
-print()
-defi = input("Do you want definitions (y or n)?: ")
-print()
-print("---")
-print()
+# Start and End Chords
+start_midi_key = _midi_key[start_key]
+start_midi_key = int(start_midi_key)
+start_midi_chord = _midi_quality[start_quality].split(" ")
+start_midi_chord = [eval(i) for i in start_midi_chord]
+start_midi_chord = [x+start_midi_key for x in start_midi_chord]
+start_midi_chord = [x+_midi_accidental[start_accidental] for x in start_midi_chord]
+print(f'Start: {start_midi_chord}')
+end_midi_key = _midi_key[end_key]
+end_midi_key = int(end_midi_key)
+end_midi_chord = _midi_quality[end_quality].split(" ")
+end_midi_chord = [eval(i) for i in end_midi_chord]
+end_midi_chord = [x+end_midi_key for x in end_midi_chord]
+end_midi_chord = [x+_midi_accidental[end_accidental] for x in end_midi_chord]
 
-print(startOnset)
-print(startContinuation)
-print(startTermination)
-print(random.choice(motionList["motion"]))
-print(random.choice(behaviorList["causality"]))
-print(random.choice(behaviorList["coordination"]))
-print(random.choice(behaviorList["dominance"]))
-print(random.choice(behaviorList["conflict"]))
-print(random.choice(spaceList["specSpace"]))
-
+# Packing the chords TODO: will always pack the chord because a 4th < 5th
+if end_midi_chord[2] - end_midi_chord[0] > 6:
+    end_midi_chord = end_midi_chord[1:] + end_midi_chord[:1]
+    end_midi_chord[2] = end_midi_chord[2] + 12
+    print(f'Packed End: {end_midi_chord}')
+else:
+    print(end_midi_chord)
+exit()
 # shuffle the lists with keeping the desired one in front
 def shuffleList(a, b):
     a = a[b: ]+a[: b]
@@ -110,11 +90,6 @@ while z < len(all):
         pass
 
     motion = random.choice(motionList["motion"])
-    print()
-    print("---")
-    print()
-    # put it into a loop to so it can be flexible with how many strucProc stays
-    # in common
     print(f'Change structProc {magicList}')
     for m in magicList:
         if m == 0 and a < onsetLength:
@@ -124,102 +99,12 @@ while z < len(all):
         elif m == 2 and c < terminationLength:
             c+=1
         elif a == onsetLength and b == continuationLength and c == terminationLength:
-            print(endOnset)
-            print(endContinuation)
-            print(endTermination)
-            print(motion)
-            print(random.choice(behaviorList["causality"]))
-            print(random.choice(behaviorList["coordination"]))
-            print(random.choice(behaviorList["dominance"]))
-            print(random.choice(behaviorList["conflict"]))
-            print(random.choice(spaceList["specSpace"]))
-            print()
-            print("---")
-            print()
-            # added definitions to the end of the printing
-            print()
-            if defi == 'y':
-                print("# DEFINITIONS")
-                print()
-                print("## ONSETS")
-                print()
-                print("departure: the action of leaving, especially to start a journey")
-                print("emergence: the process of coming into view or becoming exposed after being concealed")
-                print("anacrusis: 'delta' but also one or more unstressed notes before the first bar line of a piece or passage")
-                print("attack: an aggressive and violent action against a person or place")
-                print("upbeat: an unaccented beat preceding an accented beat")
-                print("downbeat: an accented beat, usually the first of the bar")
-                print()
-                print("## CONTINUATIONS")
-                print()
-                print("passage: the act or process of moving through, under, over, or past something on the way from one place to another")
-                print("transition: the process or a period of changing from one state or condition to another")
-                print("prolongation: extension of the spatial length of something")
-                print("maintanence:  process of maintaining or preserving someone or something")
-                print("statement: the occurrence of a musical idea or motive within a composition")
-                print()
-                print("## TERMINATION")
-                print()
-                print("arrival: the emergence or appearance of a new development, phenomenon, or product")
-                print("disappearance: the process or fact of something ceasing to exist or be in use")
-                print("closure: a sense of resolution or conclusion at the end of an artistic work")
-                print("release: allow or enable to escape from confinement; set free")
-                print("resolution: the passing of a discord into a concord during the course of changing harmony")
-                print("plane: a level of existence, thought, or development")
-                print()
-                print("## MOTION AND GROWTH")
-                print()
-                print("### UNI")
-                print()
-                print("ascent: a climb or walk to the summit of a mountain or hill")
-                print("plane: a level of existence, thought, or development")
-                print("descent: an action of moving downward, dropping, or falling")
-                print()
-                print("### RECIPROCAL")
-                print()
-                print("parabola: ")
-                print("oscillation: movement back and forth at a regular speed")
-                print("undulation: the action of moving smoothly up and down")
-                print()
-                print("### CYCLIC")
-                print()
-                print("rotation: the action of rotating around an axis or center")
-                print("spiral: winding in a continuous and gradually widening (or tightening) curve")
-                print("spin: rapid turning or whirling motion")
-                print()
-                print("### CENTRIC")
-                print()
-                print("vortex: a mass of whirling fluid or air, especially a whirlpool or whirlwind")
-                print("pericentrality: arranged around a center")
-                print("centrifugal motion: apparent outward force on a mass when it is rotated")
-                print()
-                print("### BI/MULTIDIRECTIONAL")
-                print()
-                print("agglomeration: a mass or collection of things")
-                print("dissipation: to spread thin or scatter and gradually vanish")
-                print("dilation: the act or action of enlarging, expanding, or widening")
-                print("contraction: to draw together so as to become diminished in size")
-                print("divergence: a drawing apart (as of lines extending from a common center)")
-                print("convergence: independent development of similar traits or features (as of body structure or behavior) in unrelated or distantly related species or lineages")
-                print("exogeny: the origins of existence of self, or the identity of self, emanating from, or sustaining, outside the natural or influenced realm")
-                print("endogeny: processes that originate from within a living system such as an organism, tissue, or cell")
-                print()
-                print("## SPECTRAL SPACE")
-                print()
-                print("canopy: above 5,000Hz")
-                print("center: 300Hz and 5,000Hz")
-                print("root: below 300Hz")
-            else:
-                pass
+            print(end_key)
+            print(end_accidental)
+            print(end_quality)
             exit()
     else:
         pass
     print(onsetList[a])
     print(continuationList[b])
     print(terminationList[c])
-    print(motion)
-    print(random.choice(behaviorList["causality"]))
-    print(random.choice(behaviorList["coordination"]))
-    print(random.choice(behaviorList["dominance"]))
-    print(random.choice(behaviorList["conflict"]))
-    print(random.choice(spaceList["specSpace"]))

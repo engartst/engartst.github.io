@@ -126,6 +126,18 @@
     + voluntary
     + fast timbre change
 
+### Seven Additional, Blackburn 2011
+
+- plummet
+	+ fast timbre change
+- dive
+- fall
+- tumble
+- sink
+- glide
+	+ slow timbre change
+- slump
+
 ## Textures
 
 - streaming

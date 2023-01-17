@@ -1,4 +1,3 @@
-#!/usr/local/bin/python3.10
 
 # A workout builder by Stewart Engart
 
@@ -41,6 +40,14 @@ def shoulders():
 def triceps():
     choice = random.randint(71, 77)
     print(f'{list_of_dict[choice]["Body Part"]} : {list_of_dict[choice]["Exercise"]}')
+
+with open("stretch.csv", 'r') as f:
+    dict_reader = DictReader(f)
+    list_of_dict = list(dict_reader)
+    print('# Stretch/Warmup')
+    print('Neck Roll')
+    for i in range(len(list_of_dict)):
+        print(list_of_dict[i]["Neck Roll"])
 
 with open("dumbbellExercises.csv", 'r') as f:
     dict_reader = DictReader(f)

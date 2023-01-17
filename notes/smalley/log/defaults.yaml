@@ -1,0 +1,8 @@
+---
+title: Spectromorphology
+author: Stewart Engart
+urlcolor: blue
+header-includes: |
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+---
