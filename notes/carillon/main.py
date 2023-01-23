@@ -1,25 +1,38 @@
 from scamp import *
 
 s = Session()
-s.tempo = 120
-
 # requires soundfont from https://www.arrangingforcarillon.com/resources/tools/ 
 
-playback_settings.register_named_soundfont("carillon", "/Users/hse9/Downloads/BrynMawr-carillon.sf2")
+#playback_settings.register_named_soundfont("carillon", "/Users/hse9/Downloads/BrynMawr-carillon.sf2")
+playback_settings.register_named_soundfont("carillon", "C:/Users\engartst\Desktop\BrynMawr-carillon.sf2")
 playback_settings.default_soundfont = "carillon"
 carillon = s.new_part("carillon")
-notes = [59, 64, 67, 66, 64, 71, 69, 66, 64, 67, 66, 63, 65, 59]
-durs = [1, 1.75, .25, 1, 2, 1, 3, 3, 1.75, .25, 1, 2, 1, 3]
+notes = [60, 67, 65]
+durs = [1, 2, 3]
+i = 0
+j = 0
 
 def scroll_move(x, y, dx, dy):
     print(x, dy)
-    if dy >= 1:
-        carillon.play_note(60*dy, 0.5*dy, 1)
+    global j
+    # add if j == 6 * dur[i]:
+    if j == 6:
+        if dy >= 1:
+            print("dong")
+            global i
+            if i < len(notes):
+                print (notes[i])
+                carillon.play_note(notes[i], 1*dy, durs[i], blocking=False)
+                i+=1
+            else:
+                i = 0
+                print (notes[i])
+                carillon.play_note(notes[i], 1*dy, durs[i], blocking=False)
+                i+=1
+        j=0   
     else:
-        print("no")
+        j+=1
 
 
-
-#for n, d in zip(notes, durs): carillon.play_note(n, d, 1)
-s.register_mouse_listener(on_scroll=scroll_move, relative_coordinates=True, suppress=True)
+s.register_mouse_listener(on_scroll=scroll_move, relative_coordinates=True, suppress=False)
 s.wait_forever()
