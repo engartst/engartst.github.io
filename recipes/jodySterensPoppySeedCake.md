@@ -2,13 +2,13 @@
 
 ## Ingredients 
 
-1 box of yellow cake mix
-1 pack of instant vanilla pudding
-4 eggs
-1 cup of sour cream
-1/2 cup poppyseeds
-1/2 cup vegetable oil
-1/2 cup cream sherry
+- 1 box of yellow cake mix
+- 1 pack of instant vanilla pudding
+- 4 eggs
+- 1 cup of sour cream
+- 1/2 cup poppyseeds
+- 1/2 cup vegetable oil
+- 1/2 cup cream sherry
 
 ## Directions
 
