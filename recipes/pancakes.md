@@ -1,6 +1,6 @@
-# Mimi's Pancakes
+# Pancakes
 
-A family pancake recipe
+A family pancake recipe from the kitchen of Vernelle Hood
 
 ## Ingredients
 

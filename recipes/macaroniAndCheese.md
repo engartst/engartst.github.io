@@ -1,6 +1,6 @@
-# Dee Engart's Macaroni & Cheese
+# Macaroni & Cheese
 
-A family Macaroni and Cheese recipe
+A family Macaroni and Cheese recipe, from the kitchen of Dee Engart
 
 ## Ingredients
 

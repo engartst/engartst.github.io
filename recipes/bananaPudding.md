@@ -1,6 +1,6 @@
-# Connie's Banana Pudding
+# Banana Pudding
 
-A family banana pudding recipes
+A family banana pudding recipes from the kitchen of Connie Engart
 
 ## Ingredients:
 

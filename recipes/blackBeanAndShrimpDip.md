@@ -1,6 +1,6 @@
-# Connie's Black Bean and Shrimp
+# Black Bean and Shrimp Dip
 
-A fun dip for fun parties
+A fun dip for fun parties, from the kitchen of Connie Engart
 
 ## Ingredients
 
