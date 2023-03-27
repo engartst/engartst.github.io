@@ -110,3 +110,81 @@ with open('recipes.html', 'w') as output_file:
             list_list = zip_list
         )
     )
+
+# MEDIA PLAY
+mp_dir_list = []
+mp_file_list = []
+mp_list = []
+mpl = []
+
+mp_note_template = template_env.get_template('mp_note_temp.html')
+
+for root, dirs, files in os.walk('./mediaPlay/notes/'):
+    for di in dirs:
+        mp_dir_list.append(os.path.join(root,di))
+    for file in files:
+        mp_file_list.append(os.path.join(root,file))
+
+
+for file in mp_file_list:
+    if file.endswith(".md"):
+        with open(f'{file}', 'r') as markdown_file:
+            article = markdown(markdown_file.read())
+            title = file.split('/')
+            title = title[-1]
+            title = title.split('.')[0]
+            mpl.append(title)
+            with open(f'{file[:-3]}.html', 'w') as output_file:
+                output_file.write(
+                    mp_note_template.render(
+                        article=article,
+                        title=title
+                    )
+                )
+
+
+mp_piece_dir_list = []
+mp_piece_file_list = []
+mppl = []
+
+for root, dirs, files in os.walk('./mediaPlay/pieces/'):
+    for di in dirs:
+        mp_piece_dir_list.append(os.path.join(root,di))
+    for file in files:
+        mp_piece_file_list.append(os.path.join(root,file))
+        mppl.append(file.rsplit('.', 1)[0])
+
+mp_piece_list = mp_piece_file_list
+mp_list_template = template_env.get_template('mp_note_list_temp.html')
+
+mp_len = len(mp_list)
+mp_list.sort()
+mp_piece_len = len(mp_piece_list)
+mp_piece_list.sort()
+list_list = []
+piece_list_list = []
+x = []
+y = []
+
+for i in mp_list:
+    mpl.append(i.rsplit('/', 1)[-1])
+
+for i in mp_file_list:
+    x.append(i.rsplit('Play/', 1)[1])
+
+for i in mp_piece_file_list:
+    y.append(i.rsplit('Play/',1)[1])
+
+zip_list = zip(mpl, x)
+piece_list = zip(mppl, y)
+
+with open('./mediaPlay/index.html', 'w') as output_file:
+    output_file.write(
+        mp_list_template.render(
+            mp_list = mp_list,
+            mp_len = mp_len,
+            list_list = zip_list,
+            piece_list = piece_list
+        )
+    )
+
