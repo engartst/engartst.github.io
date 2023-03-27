@@ -175,8 +175,8 @@ for i in mp_file_list:
 for i in mp_piece_file_list:
     y.append(i.rsplit('Play/',1)[1])
 
-x.sort()
-y.sort()
+mpl.sort()
+mppl.sort()
 zip_list = zip(mpl, x)
 piece_list = zip(mppl, y)
 
