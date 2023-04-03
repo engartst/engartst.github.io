@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <title>mediaPlay/notes/</title>
+    <title>mediaPlay/</title>
     <link rel="author" href="humans.txt" />
     <link rel="stylesheet" href="../css/main.css" type="text/css" />
 </head>
@@ -13,18 +13,18 @@
 <body>
     <div class="header">
         <div class="bar">
-            <h1 class="banner"><a href="/" class="title fancy-link">~mediaPlay/notes/</a></h1>
+            <h1 class="banner"><a href="/" class="title fancy-link">~mediaPlay/</a></h1>
         </div>
     </div>
 
-    <h2>Notes</h2>
+    <h1><b>Notes<b></h1>
 
     {% for item, link in list_list %}
     <h3>
-    <a href="{{link}}" class="title fancy-link">{{item}}</a>
+	    <a href="{{link}}" class="title fancy-link" >{{item}}</a>
     </h3>
     {% endfor%}
-    <h2>Pieces</h2>
+    <h1><b>Pieces<b></h1>
     {% for item, link in piece_list %}
     <h3>
     <a href="{{link}}" class="title fancy-link">{{item}}</a>
