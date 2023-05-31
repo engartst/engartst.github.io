@@ -11,9 +11,9 @@ __license__ = "MIT"
 
 
 def main():
-    with open('first.txt', 'r') as file:
+    with open('raleighFirst.txt', 'r') as file:
         first = file.read()
-    with open('second.txt', 'r') as file:
+    with open('raleighSecond.txt', 'r') as file:
         second = file.read()
 
     combos = []
@@ -29,7 +29,8 @@ def main():
     for query in combos:
         results.append(search(query, num_results=1))
 
-    print(list(results))
+    #print(list(results))
+    print(list(combos))
 
 
 if __name__ == "__main__":
