@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
@@ -14,4 +14,8 @@ function draw() {
 	triangle(width/2 + mouseX, height/2 - mouseY, 200 + mouseX, 200 - mouseY, 100 + mouseX, 100 - mouseY);
 	fill(12, 222);
 	
+}
+
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
 }
