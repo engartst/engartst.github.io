@@ -183,7 +183,7 @@ img {
   --offset: 50px;
   position: sticky;
   bottom: 20px;
-  margin-right: 10px;
+  margin-right: -70%;
   place-self: end;
   margin-top: calc(100vh + var(--offset));
 
@@ -197,6 +197,7 @@ img {
   white-space: nowrap;
 }
 
+
 /*to make the fallen eagles photos b&w*/
 img.desaturate {
   filter: grayscale(100%);
@@ -205,3 +206,4 @@ img.desaturate {
   -o-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
 }
+
