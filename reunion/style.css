@@ -196,3 +196,12 @@ img {
   border-radius: 100px;
   white-space: nowrap;
 }
+
+/*to make the fallen eagles photos b&w*/
+img.desaturate {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+}
