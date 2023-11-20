@@ -15,6 +15,7 @@ header {
   padding: 0.5em;
   margin: 0 auto;
   text-align: center;
+  z-index: 100;
 }
 body {
   color: black;
@@ -205,5 +206,6 @@ img.desaturate {
   -moz-filter: grayscale(100%);
   -o-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
+  z-index: -1;
 }
 
