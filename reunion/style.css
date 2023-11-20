@@ -177,3 +177,22 @@ img {
     max-width: 100%;
   }
 }
+
+/*for the back to top button*/
+.top {
+  --offset: 50px;
+  position: sticky;
+  bottom: 20px;
+  margin-right: 10px;
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+
+  /* visual styling */
+  text-decoration: none;
+  padding: 10px;
+  font-family: Georgia, serif;
+  background: #004890;
+  color: #fff;
+  border-radius: 100px;
+  white-space: nowrap;
+}
