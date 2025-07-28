@@ -1,0 +1,32 @@
+{
+  "name": "library-conference-site",
+  "version": "1.0.0",
+  "description": "Professional static website for Regional Library Mini-Conference 2025",
+  "main": "index.html",
+  "scripts": {
+    "serve": "python3 -m http.server 8000",
+    "serve-alt": "php -S localhost:8000",
+    "validate-html": "echo 'Use https://validator.w3.org/ to validate HTML'",
+    "validate-css": "echo 'Use https://jigsaw.w3.org/css-validator/ to validate CSS'",
+    "lighthouse": "echo 'Run Lighthouse audit in Chrome DevTools'"
+  },
+  "keywords": [
+    "library",
+    "conference",
+    "static-site",
+    "responsive",
+    "professional"
+  ],
+  "author": "Conference Organizer",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/library-conference-site"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/library-conference-site/issues"
+  },
+  "homepage": "https://your-conference-site.com"
+}
