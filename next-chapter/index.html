@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Next Chapter: Shaping the Future of Librarianship | Regional Library Mini-Conference 2025</title>
-    <meta name="description" content="Join librarians, educators, and community leaders at our Regional Library Mini-Conference 2025: The Next Chapter. Discover innovative practices, network with peers, and shape the future of library services.">
+    <!-- Prevent search engine indexing -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <title>The Next Chapter: Shaping the Future of Librarianship | iSchools Regional Mini-Conference</title>
+    <meta name="description" content="Join academics and practitioners from North American iSchools for a two-day exploration of information science education, research, and practice. Discover the evolving role of iSchools in 2025 and beyond.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,48 +14,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="banner" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="Old_Well_mark.png" alt="UNC Logo" class="nav-logo-img">
-                <span>Next Chapter 2025</span>
+                <img src="Old_Well_mark.png" alt="University of North Carolina at Chapel Hill logo" class="nav-logo-img">
+                <span>The Next Chapter</span>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#schedule" class="nav-link">Schedule</a></li>
-                <li><a href="#speakers" class="nav-link">Speakers</a></li>
-                <li><a href="#venue" class="nav-link">Venue</a></li>
-                <li><a href="#register" class="nav-link register-btn">Register</a></li>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="#home" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="#schedule" class="nav-link" role="menuitem">Schedule</a></li>
+                <li role="none"><a href="#speakers" class="nav-link" role="menuitem">Speakers</a></li>
+                <li role="none"><a href="#resources" class="nav-link" role="menuitem">Resources</a></li>
+                <li role="none"><a href="#venue" class="nav-link" role="menuitem">Venue</a></li>
+                <li role="none"><a href="#register" class="nav-link register-btn" role="menuitem">Register</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="dark-mode-toggle" aria-label="Toggle dark mode" id="dark-mode-toggle">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </div>
     </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
                 <h1>The Next Chapter: Shaping the Future of Librarianship</h1>
-                <p class="hero-subtitle">Regional Library Mini-Conference 2025</p>
-                <p class="hero-description">Join librarians, educators, and community leaders for a day of innovative discussions, networking, and professional development as we explore the evolving landscape of library services.</p>
+                <p class="hero-subtitle">iSchools Organization Biannual Regional Mini-Conference</p>
+                <p class="hero-description">Join academics and practitioners from North American iSchools for two days exploring data equity, information literacy, and activist librarianship. Discover how iSchools can champion social justice through inclusive data practices and community engagement.</p>
                 <div class="hero-details">
                     <div class="detail-item">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>September 15, 2025</span>
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                        <span><time datetime="2025-09-15/2025-09-16">September 15-16, 2025</time></span>
                     </div>
                     <div class="detail-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                         <span>UNC School of Information and Library Science, Chapel Hill</span>
                     </div>
                     <div class="detail-item">
-                        <i class="fas fa-clock"></i>
-                        <span>9:00 AM - 5:00 PM</span>
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <span><time datetime="09:00/17:00">9:00 AM - 5:00 PM</time></span>
                     </div>
                 </div>
                 <div class="hero-buttons">
@@ -69,26 +81,31 @@
         <div class="container">
             <div class="section-header">
                 <h2>About the Conference</h2>
-                <p>Empowering libraries to serve their communities better</p>
+                <p>Exploring the evolving role of iSchools in information science education and practice</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Our Regional Library Mini-Conference brings together library professionals, community leaders, and education advocates to share knowledge, discuss challenges, and explore innovative solutions for the future of library services and librarianship.</p>
+                    <p>The iSchools Organization Biannual Regional Mini-Conference brings together academics (students and faculty) from North American iSchools and information science practitioners to explore the current and future role of iSchools in 2025 and beyond. This two-day event focuses on collaborative knowledge sharing, innovative research presentation, and strategic planning for the future of information science education.</p>
                     <div class="features">
                         <div class="feature">
                             <i class="fas fa-users"></i>
-                            <h3>Network & Connect</h3>
-                            <p>Meet fellow library professionals and build lasting connections within our regional community.</p>
+                            <h3>Academic Collaboration</h3>
+                            <p>Connect with faculty and students from iSchools across North America to foster inter-institutional partnerships.</p>
                         </div>
                         <div class="feature">
                             <i class="fas fa-lightbulb"></i>
-                            <h3>Learn & Innovate</h3>
-                            <p>Discover cutting-edge practices and innovative approaches to library services and community engagement.</p>
+                            <h3>Research & Innovation</h3>
+                            <p>Discover cutting-edge research in information science and explore innovative approaches to education and practice.</p>
                         </div>
                         <div class="feature">
                             <i class="fas fa-certificate"></i>
                             <h3>Professional Development</h3>
-                            <p>Earn continuing education credits while advancing your professional skills and knowledge.</p>
+                            <p>Engage with diverse scholarly communication formats and contribute to the future direction of iSchools.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h3>Community Impact</h3>
+                            <p>Explore how iSchools can champion social justice through data equity, information literacy, and activist librarianship.</p>
                         </div>
                     </div>
                 </div>
@@ -101,79 +118,173 @@
         <div class="container">
             <div class="section-header">
                 <h2>Conference Schedule</h2>
-                <p>A full day of engaging sessions and networking opportunities</p>
+                <p>Two days of diverse scholarly communication formats and collaborative sessions</p>
             </div>
-            <div class="schedule-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-time">9:00 AM</div>
+            
+            <!-- Day 1 -->
+            <div class="day-header">
+                <h3>Day 1 - <time datetime="2025-09-15">Monday, September 15, 2025</time></h3>
+                <p><strong>Theme:</strong> Data Equity and Social Justice in Information Systems</p>
+            </div>
+            <div class="schedule-timeline" role="list" aria-label="Day 1 schedule">
+                <div class="timeline-item" role="listitem">
+                    <div class="timeline-time"><time datetime="08:30">8:30 AM</time></div>
                     <div class="timeline-content">
                         <h3>Registration & Welcome Coffee</h3>
                         <p>Check-in, networking, and light refreshments</p>
-                        <span class="timeline-location">SILS Main Lobby</span>
+                        <span class="timeline-location">Manning Ground Floor – Hallway</span>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-time">9:30 AM</div>
+                    <div class="timeline-time">9:00 AM</div>
                     <div class="timeline-content">
                         <h3>Opening Keynote: Preparing the Next Generation of Librarians to be "Warrior" Librarians</h3>
                         <p>Dr. Tracie D. Hall discusses the challenging context librarians are entering - from budget cuts and book bans to combating misinformation and general distrust - and how librarians can thrive and lead in this environment.</p>
-                        <span class="timeline-location">Manning Hall Auditorium</span>
+                        <span class="timeline-location">Manning 01</span>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-time">10:30 AM</div>
+                    <div class="timeline-time">10:00 AM</div>
                     <div class="timeline-content">
-                        <h3>Morning Sessions</h3>
-                        <div class="session-tracks">
-                            <div class="track">
-                                <h4>Track A: Digital Innovation</h4>
-                                <p>Implementing new technologies in library services</p>
-                            </div>
-                            <div class="track">
-                                <h4>Track B: Community Engagement</h4>
-                                <p>Building stronger connections with your community</p>
-                            </div>
-                        </div>
+                        <h3>Paper Presentation: Dying to Be Counted</h3>
+                        <p>Luzita Francis, MHA, MSIS examines flaws in North Carolina's 2020 COVID-19 mortality data, revealing how missing Latino ethnicity data stems from systemic issues, not random error.</p>
+                        <span class="timeline-location">Manning 208</span>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-time">12:00 PM</div>
+                    <div class="timeline-time">10:45 AM</div>
                     <div class="timeline-content">
-                        <h3>Lunch & Networking</h3>
-                        <p>Catered lunch with opportunities for informal discussions</p>
-                        <span class="timeline-location">SILS Commons</span>
+                        <h3>Coffee Break & Poster Session</h3>
+                        <p>Interactive poster presentations on data equity and social justice research projects</p>
+                        <span class="timeline-location">Manning 01</span>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-time">1:30 PM</div>
+                    <div class="timeline-time">11:30 AM</div>
                     <div class="timeline-content">
-                        <h3>Afternoon Sessions</h3>
-                        <div class="session-tracks">
-                            <div class="track">
-                                <h4>Track C: Youth Services</h4>
-                                <p>Innovative programs for children and teens</p>
-                            </div>
-                            <div class="track">
-                                <h4>Track D: Resource Management</h4>
-                                <p>Optimizing collections and budgets</p>
-                            </div>
-                        </div>
+                        <h3>Workshop: Using PolicyMap to Visualize Social Inequalities</h3>
+                        <p>Dr. Jazmyne McNeese demonstrates how to leverage PolicyMap's data visualization tools to uncover and communicate social inequities through spatial data.</p>
+                        <span class="timeline-location">Manning 303</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">12:30 PM</div>
+                    <div class="timeline-content">
+                        <h3>Lunch & Roundtable Discussions</h3>
+                        <p>Small group roundtables on: Data Ethics in Health Research, Community-Centered Data Collection, Equity in Information Access</p>
+                        <span class="timeline-location">Manning Ground Floor – Hallway</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">2:00 PM</div>
+                    <div class="timeline-content">
+                        <h3>Paper Presentation: Designing for Belonging</h3>
+                        <p>Dr. Marijel "Maggie" Melo explores data-driven approaches to equity in library and makerspace research, examining how data collection practices can create more inclusive environments.</p>
+                        <span class="timeline-location">Manning 01</span>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-time">3:00 PM</div>
                     <div class="timeline-content">
-                        <h3>Panel Discussion: Collaboration Across Libraries</h3>
-                        <p>Regional library directors discuss partnership opportunities</p>
-                        <span class="timeline-location">Manning Hall Auditorium</span>
+                        <h3>Lightning Talks: Data Equity in Action</h3>
+                        <p>Rapid-fire presentations on community-based data initiatives and equitable research practices</p>
+                        <span class="timeline-location">Manning 14</span>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-time">4:15 PM</div>
+                    <div class="timeline-time">3:30 PM</div>
                     <div class="timeline-content">
-                        <h3>Closing Remarks & Next Steps</h3>
-                        <p>Conference wrap-up and planning for future collaborations</p>
-                        <span class="timeline-location">Manning Hall Auditorium</span>
+                        <h3>Coffee Break</h3>
+                        <p>Networking and informal discussions</p>
+                        <span class="timeline-location">Manning Ground Floor – Hallway</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">4:00 PM</div>
+                    <div class="timeline-content">
+                        <h3>Collaborative Workshop: Policy Reforms for Data Equity</h3>
+                        <p>Working session developing actionable policy recommendations for accurate, complete data collection in public health and social services</p>
+                        <span class="timeline-location">Manning 304</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">5:30 PM</div>
+                    <div class="timeline-content">
+                        <h3>Day 1 Wrap-up & Networking Reception</h3>
+                        <p>Social hour with light appetizers and continued networking</p>
+                        <span class="timeline-location">Manning Ground Floor – Hallway</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-header" style="margin-top: 3rem;">
+                <h3>Day 2 - <time datetime="2025-09-16">Tuesday, September 16, 2025</time></h3>
+                <p><strong>Theme:</strong> Information Literacy, Media Literacy, and Activist Librarianship</p>
+            </div>
+            <div class="schedule-timeline" role="list" aria-label="Day 2 schedule">
+                <div class="timeline-item">
+                    <div class="timeline-time">9:00 AM</div>
+                    <div class="timeline-content">
+                        <h3>Welcome Coffee & Day 2 Opening</h3>
+                        <p>Morning refreshments and overview of Day 2 activities</p>
+                        <span class="timeline-location">Manning Ground Floor – Hallway</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">9:30 AM</div>
+                    <div class="timeline-content">
+                        <h3>Panel: Information & Media Literacy in the Digital Age</h3>
+                        <p>Librarians and educators discuss strategies for combating misinformation and building critical information literacy skills</p>
+                        <span class="timeline-location">Manning 01</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">10:30 AM</div>
+                    <div class="timeline-content">
+                        <h3>Lightning Talks: Warrior Librarian Initiatives</h3>
+                        <p>Stories from the field: librarians leading community activism and social justice initiatives</p>
+                        <span class="timeline-location">Manning 14</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">11:15 AM</div>
+                    <div class="timeline-content">
+                        <h3>Roundtable Sessions</h3>
+                        <p>Focused discussions: Community Engagement Strategies, Digital Rights Advocacy, Inclusive Information Services</p>
+                        <span class="timeline-location">Manning 303, Manning 304, Manning 307</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">12:30 PM</div>
+                    <div class="timeline-content">
+                        <h3>Lunch & Student Research Showcase</h3>
+                        <p>Graduate students present research on information literacy, community engagement, and social justice in libraries</p>
+                        <span class="timeline-location">Manning Ground Floor – Hallway</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">2:00 PM</div>
+                    <div class="timeline-content">
+                        <h3>Workshop: Building Activist Librarianship Programs</h3>
+                        <p>Hands-on session developing curricula and training programs for "warrior librarians" in academic and public library settings</p>
+                        <span class="timeline-location">Manning 303, Manning 304</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">3:30 PM</div>
+                    <div class="timeline-content">
+                        <h3>Final Presentations: Warrior Librarian Action Plans</h3>
+                        <p>Workshop groups present concrete strategies for implementing activist librarianship in their institutions</p>
+                        <span class="timeline-location">Manning 01</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">4:30 PM</div>
+                    <div class="timeline-content">
+                        <h3>Closing Ceremony & Future Planning</h3>
+                        <p>Conference wrap-up and planning for 2027 regional mini-conference</p>
+                        <span class="timeline-location">Manning 01</span>
                     </div>
                 </div>
             </div>
@@ -185,31 +296,31 @@
         <div class="container">
             <div class="section-header">
                 <h2>Featured Speakers</h2>
-                <p>Learn from leading experts in library science and community engagement</p>
+                <p>Learn from leading experts in data equity, information literacy, and activist librarianship</p>
             </div>
             <div class="speakers-grid">
                 <div class="speaker-card">
                     <div class="speaker-image">
-                        <i class="fas fa-user-circle"></i>
+                        <img src="tracieHall.jpg" alt="Dr. Tracie D. Hall headshot">
                     </div>
                     <div class="speaker-info">
                         <h3>Dr. Tracie D. Hall</h3>
                         <p class="speaker-title">Keynote Speaker - Former Executive Director, American Library Association</p>
                         <p class="speaker-bio">Renowned advocate for intellectual freedom and social justice in libraries. Dr. Hall addresses the challenges facing modern librarians and how to prepare "warrior librarians" for the future.</p>
                         <div class="speaker-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Dr. Tracie D. Hall's LinkedIn profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="Dr. Tracie D. Hall's Twitter profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-image">
-                        <i class="fas fa-user-circle"></i>
+                        <img src="luzitaFrancis.webp" alt="Luzita Francis headshot">
                     </div>
                     <div class="speaker-info">
-                        <h3>Michael Chen</h3>
-                        <p class="speaker-title">Director, Metro Public Library System</p>
-                        <p class="speaker-bio">Innovative leader in community programming and digital inclusion initiatives across urban library networks.</p>
+                        <h3>Luzita Francis, MHA, MSIS</h3>
+                        <p class="speaker-title">Data Equity Researcher & Public Health Advocate</p>
+                        <p class="speaker-bio">Expert in health data equity examining systemic flaws in data collection that impact marginalized communities. Her research on COVID-19 mortality data reveals how institutional neglect compromises public health responses.</p>
                         <div class="speaker-social">
                             <a href="#"><i class="fab fa-linkedin"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -218,12 +329,12 @@
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-image">
-                        <i class="fas fa-user-circle"></i>
+                        <img src="jazmyneMcneese.jpg" alt="Dr. Jazmyne McNeese headshot">
                     </div>
                     <div class="speaker-info">
-                        <h3>Lisa Thompson</h3>
-                        <p class="speaker-title">Youth Services Coordinator</p>
-                        <p class="speaker-bio">Award-winning children's librarian specializing in early literacy and family engagement programs.</p>
+                        <h3>Dr. Jazmyne McNeese</h3>
+                        <p class="speaker-title">Senior Data Analyst at PolicyMap | Community Development Enthusiast</p>
+                        <p class="speaker-bio">Specialist in spatial data visualization and social inequality mapping. Dr. McNeese leads innovative approaches to making patterns of inequity visible and actionable through data-driven storytelling.</p>
                         <div class="speaker-social">
                             <a href="#"><i class="fab fa-linkedin"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -232,16 +343,137 @@
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-image">
-                        <i class="fas fa-user-circle"></i>
+                        <img src="marijelMelo.avif" alt="Dr. Marijel Maggie Melo headshot">
                     </div>
                     <div class="speaker-info">
-                        <h3>Robert Kim</h3>
-                        <p class="speaker-title">Technology Integration Specialist</p>
-                        <p class="speaker-bio">Expert in library automation systems and digital resource management with focus on accessibility.</p>
+                        <h3>Dr. Marijel "Maggie" Melo</h3>
+                        <p class="speaker-title">Associate Professor, UNC-Chapel Hill</p>
+                        <p class="speaker-bio">Researcher in inclusive library and makerspace design. Dr. Melo's work focuses on how data collection practices can create more equitable environments and challenge dominant narratives about library access.</p>
                         <div class="speaker-social">
                             <a href="#"><i class="fab fa-linkedin"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Information Ecosystem Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2>Information Ecosystem & Resources</h2>
+                <p>Comprehensive support for collaboration, knowledge sharing, and conference navigation</p>
+            </div>
+            <div class="resources-content">
+                <div class="resource-category">
+                    <div class="resource-header">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Campus Navigation & Support</h3>
+                    </div>
+                    <div class="resource-links">
+                        <a href="https://maps.unc.edu" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Interactive UNC Campus Map</span>
+                        </a>
+                        <a href="#" target="_blank" class="resource-link">
+                            <i class="fas fa-parking"></i>
+                            <span>Visitor Parking Information</span>
+                        </a>
+                        <a href="#" target="_blank" class="resource-link">
+                            <i class="fas fa-bed"></i>
+                            <span>Campus Accommodations</span>
+                        </a>
+                        <a href="https://dining.unc.edu/locations/" target="_blank" class="resource-link">
+                            <i class="fas fa-utensils"></i>
+                            <span>Campus Dining Options</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-category">
+                    <div class="resource-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Collaboration & Knowledge Sharing</h3>
+                    </div>
+                    <div class="resource-links">
+                        <a href="#" class="resource-link">
+                            <i class="fab fa-slack"></i>
+                            <span>Conference Slack Workspace</span>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fab fa-google-drive"></i>
+                            <span>Shared Google Drive</span>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-comments"></i>
+                            <span>Live Discussion Forums</span>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>Collaborative Note-Taking</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-category">
+                    <div class="resource-header">
+                        <i class="fas fa-archive"></i>
+                        <h3>Conference Archive & Repository</h3>
+                    </div>
+                    <div class="resource-links">
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-video"></i>
+                            <span>Session Recordings Archive</span>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-file-powerpoint"></i>
+                            <span>Presentation Slides Repository</span>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-image"></i>
+                            <span>Poster Session Gallery</span>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-book"></i>
+                            <span>Conference Proceedings</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-category">
+                    <div class="resource-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Digital Tools & Platforms</h3>
+                    </div>
+                    <div class="resource-links">
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Conference Mobile App</span>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-hashtag"></i>
+                            <span>Social Media Hub (#iSchools2025)</span>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Participant Directory</span>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Personal Schedule Builder</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-ecosystem-note">
+                <div class="note-content">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <h4>Centralized Information System</h4>
+                        <p>All conference resources are integrated into a centralized information ecosystem designed to support seamless collaboration, knowledge sharing, and long-term access to conference materials. Links and access credentials will be provided to registered participants one week before the conference.</p>
                     </div>
                 </div>
             </div>
@@ -268,20 +500,12 @@
                         </div>
                         <div class="venue-features">
                             <div class="feature-item">
-                                <i class="fas fa-wifi"></i>
-                                <span>Free Wi-Fi</span>
-                            </div>
-                            <div class="feature-item">
                                 <i class="fas fa-parking"></i>
-                                <span>Free Parking</span>
+                                <span>Limited Parking Available</span>
                             </div>
                             <div class="feature-item">
                                 <i class="fas fa-wheelchair"></i>
                                 <span>ADA Accessible</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-utensils"></i>
-                                <span>Catering Available</span>
                             </div>
                         </div>
                     </div>
@@ -380,7 +604,7 @@
                         <i class="fas fa-info-circle"></i>
                         <div>
                             <h4>Registration Includes</h4>
-                            <p>All sessions, materials, refreshments, lunch, and access to digital resources. Continuing education credits available.</p>
+                            <p>All sessions, materials, refreshments, lunch, and access to digital resources.</p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -393,23 +617,23 @@
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="Old_Well_mark.png" alt="UNC Logo" class="footer-logo-img">
-                        <span>Next Chapter 2025</span>
+                        <img src="Old_Well_mark.png" alt="University of North Carolina at Chapel Hill logo" class="footer-logo-img">
+                        <span>The Next Chapter</span>
                     </div>
-                    <p>Connecting communities through knowledge and innovation in library services.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    <p>Connecting iSchools communities through collaborative knowledge sharing and innovation in information science.</p>
+                    <div class="social-links" role="list" aria-label="Social media links">
+                        <a href="#" role="listitem" aria-label="Facebook page"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" role="listitem" aria-label="Twitter profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" role="listitem" aria-label="LinkedIn page"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#" role="listitem" aria-label="Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -418,6 +642,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#schedule">Schedule</a></li>
                         <li><a href="#speakers">Speakers</a></li>
+                        <li><a href="#resources">Resources</a></li>
                         <li><a href="#venue">Venue</a></li>
                         <li><a href="#register">Register</a></li>
                     </ul>
@@ -426,7 +651,7 @@
                     <h4>Contact Info</h4>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>info@libcon2025.org</span>
+                        <span>info@next-chapter-ischools.org</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -440,15 +665,20 @@
                 <div class="footer-section">
                     <h4>Updates</h4>
                     <p>Subscribe to get the latest conference updates and announcements.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    <form class="newsletter-form" role="form" aria-labelledby="newsletter-heading">
+                        <label for="email-input" class="visually-hidden">Email address</label>
+                        <input type="email" id="email-input" placeholder="Enter your email" required aria-describedby="email-help">
+                        <span id="email-help" class="visually-hidden">Enter your email address to receive conference updates</span>
+                        <button type="submit" aria-label="Subscribe to newsletter"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
                     </form>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Regional Library Mini-Conference. All rights reserved.</p>
-                <div class="footer-links">
+                <div class="footer-links" style="display: flex; justify-content: flex-end; gap: 1rem;">
+                    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license" style="display: inline-flex; align-items: center; gap: 0.25rem; text-decoration: none;">
+                        <img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" style="border-width: 0; height: 16px;">
+                        <span>CC BY 4.0</span>
+                    </a>
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
                     <a href="#">Accessibility</a>
