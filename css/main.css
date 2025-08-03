@@ -1,7 +1,7 @@
 @font-face {
   font-family: "edwin";
   src: url("../fonts/Edwin-Roman.woff") format("woff"),
-    url("../fonts/Edwin-Roman.ttf") format("truetype");
+  url("../fonts/Edwin-Roman.ttf") format("truetype");
 }
 * {
   --textcolor: #444;
