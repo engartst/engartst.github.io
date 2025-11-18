@@ -41,6 +41,28 @@ AddOutputFilterByType DEFLATE application/rss+xml
 AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 
+# Security Headers
+Header always set X-Frame-Options "DENY"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-XSS-Protection "1; mode=block"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+# Content Security Policy
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://gc.zgo.at https://player.vimeo.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self' https:; frame-src https://player.vimeo.com; connect-src 'self' https://engartst.goatcounter.com;"
+
+# Prevent access to sensitive files
+<FilesMatch "\.(env|log|sql|conf|ini|sh|py)$">
+    Require all denied
+</FilesMatch>
+
+# Block access to version control and sensitive directories
+RedirectMatch 404 /\.git
+RedirectMatch 404 /\.env
+RedirectMatch 404 /\.htaccess
+RedirectMatch 404 /README\.md
+RedirectMatch 404 /LICENSE
+
 #remove html file extension-e.g. https://example.com/file.html will become https://example.com/file
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f

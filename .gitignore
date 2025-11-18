@@ -1,1 +1,30 @@
 .DS_STORE
+
+# Security and sensitive files
+*.env
+*.env.local
+*.log
+*secret*
+*password*
+*.key
+*.pem
+
+# Development files
+node_modules/
+*.tmp
+*.temp
+.cache/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+*.orig
+
+# Build files
+dist/
+build/

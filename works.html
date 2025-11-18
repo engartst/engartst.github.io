@@ -1,10 +1,10 @@
 <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /> <meta name="description" content="Stewart Engart is a Santa Barbara based composer, synthesist, pianist, organist..." /> <meta name="keywords" content="Composer, New Music" /> <meta name="robots" content="index,follow" /> <title> Stewart Engart | works </title> <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> <link rel="manifest" href="/site.webmanifest"> <link rel="stylesheet" href="./css/main.css" type="text/css" /> </head> <body> <div class="header"> <div class="bar"> <h1 class="banner"> <a class="fancy-link" href="/"> ~sE/works </a> </h1> <ul> <li class="nav"><a class="fancy-link" href="about">about</a></li> <li class="nav"><a class="fancy-link" href="events">events</a></li> <li class="nav"><a class="fancy-link" href="copula/">links</a></li> <li class="nav"><a class="fancy-link" href="cv">vita</a></li> <li class="nav"><a class="fancy-link" href="works" style="text-decoration:underline">works</a></li> </ul> </div> </div>
 
 
-        <div> sort: <a class="fancy-link " href=# onclick="openTab('Alpha')">alpha</a>
-                <a class="fancy-link " href=# onclick="openTab('Chrono')">chrono</a>
-                    <a class="fancy-link " href=# onclick="openTab('Inst')">inst</a>
-		    <a class="fancy-link " href=# onclick="openTab('Len')">len</a>
+        <div> sort: <a class="fancy-link tab-link" href="#" data-tab="Alpha">alpha</a>
+                <a class="fancy-link tab-link" href="#" data-tab="Chrono">chrono</a>
+                    <a class="fancy-link tab-link" href="#" data-tab="Inst">inst</a>
+		    <a class="fancy-link tab-link" href="#" data-tab="Len">len</a>
         </div>
 
         <div id="Inst" class="w3-container city">
@@ -2346,6 +2346,20 @@
                 }
                 document.getElementById(cityName).style.display = "block";
             }
+            
+            // Secure event listeners
+            document.addEventListener('DOMContentLoaded', function() {
+                const tabLinks = document.querySelectorAll('.tab-link');
+                tabLinks.forEach(function(link) {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const tabName = this.getAttribute('data-tab');
+                        if (tabName && typeof openTab === 'function') {
+                            openTab(tabName);
+                        }
+                    });
+                });
+            });
         </script>
 </body>
 </html>

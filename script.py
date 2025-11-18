@@ -1,8 +1,18 @@
 import os
 import re
-from json import load
+import json
+from pathlib import Path
 from markdown2 import markdown
 from jinja2 import Environment, FileSystemLoader
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+# Security: Define allowed file extensions
+ALLOWED_EXTENSIONS = {'.md', '.json', '.html'}
+MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB limit
 
 # Constants
 MEDIA_SUFFIXES = ["ENGART.pdf", "ENGART.mp3", "ENGART.png"]
@@ -34,14 +44,52 @@ def check_media_assets(base_path):
     return assets
 
 
+def validate_file_path(file_path):
+    """Validate file path for security"""
+    path = Path(file_path)
+    
+    # Check if file exists and is within allowed directories
+    if not path.exists():
+        raise ValueError(f"File does not exist: {file_path}")
+    
+    # Check file extension
+    if path.suffix not in ALLOWED_EXTENSIONS:
+        raise ValueError(f"File extension not allowed: {path.suffix}")
+    
+    # Check file size
+    if path.stat().st_size > MAX_FILE_SIZE:
+        raise ValueError(f"File too large: {file_path}")
+    
+    # Prevent directory traversal
+    if '..' in str(path) or str(path).startswith('/'):
+        raise ValueError(f"Invalid file path: {file_path}")
+    
+    return path
+
 def render_markdown_to_html(md_file_path, output_path, template, **kwargs):
     try:
-        with open(md_file_path, "r") as f:
-            article = markdown(f.read(), extras=["fenced-code-blocks", "code-friendly"])
-        with open(output_path, "w") as f:
+        # Validate input paths
+        md_path = validate_file_path(md_file_path)
+        
+        with open(md_path, "r", encoding='utf-8') as f:
+            content = f.read()
+            # Security: Limit content size
+            if len(content) > MAX_FILE_SIZE:
+                raise ValueError("Content too large")
+            article = markdown(content, extras=["fenced-code-blocks", "code-friendly"])
+        
+        # Validate output path
+        output_dir = Path(output_path).parent
+        output_dir.mkdir(parents=True, exist_ok=True)
+        
+        with open(output_path, "w", encoding='utf-8') as f:
             f.write(template.render(article=article, **kwargs))
+        
+        logger.info(f"Successfully processed: {md_file_path} -> {output_path}")
+        
     except Exception as e:
-        print(f"Error processing {md_file_path}: {e}")
+        logger.error(f"Error processing {md_file_path}: {e}")
+        raise
 
 
 # === Works Section ===
@@ -57,10 +105,19 @@ for file in file_list:
 
         config_path = os.path.join(folder, "config.json")
         try:
-            with open(config_path, "r") as config_file:
-                config = load(config_file)
-        except FileNotFoundError:
-            print(f"Missing config file: {config_path}")
+            validate_file_path(config_path)
+            with open(config_path, "r", encoding='utf-8') as config_file:
+                config = json.load(config_file)
+            
+            # Validate config structure
+            required_keys = ['title', 'instrumentation', 'year', 'duration']
+            for key in required_keys:
+                if key not in config:
+                    logger.warning(f"Missing required key '{key}' in {config_path}")
+                    config[key] = ''
+                    
+        except (FileNotFoundError, ValueError) as e:
+            logger.error(f"Config file error {config_path}: {e}")
             continue
 
         output_path = os.path.join(folder, "index.html")
